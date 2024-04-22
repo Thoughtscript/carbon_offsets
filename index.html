@@ -52,39 +52,35 @@
 
             ul, ul > li {
                 list-style: none;
-                padding: 15px;
+                padding: 5px;
+                width: 850px;
+                display: inline-block;
             }
-
             ul > li > a {
                 text-decoration: none;
-            }
-
-
-
-            ul > li > a {
                 border: 1px solid orangered;
-                box-shadow: 1px 2px 3px 1px gray;
-                border-radius: 15px;
-                padding: 7.5px;
-                margin: 5px;
                 background-color: crimson;
-                color: white;
-
             }
-            ul > li > span {
+            ul > li > div {
+                width: 338px;
+                text-decoration: none;
                 border: 1px solid crimson;
-                box-shadow: 1px 2px 3px 1px gray;
-                border-radius: 15px;
-                padding: 7.5px;
-                margin: 5px;
                 background-color: orangered;
-                color: white;
             }
-            ul > li > span:hover, a:hover {
+
+            ul > li > div:hover, a:hover {
                 box-shadow: 0px 0px 0px 0px transparent;
                 color: white;
                 background-color: #000042;
                 border: 1px solid #000042;
+            }
+            ul > li > a,  ul > li > div {
+                box-shadow: 1px 2px 3px 1px gray;
+                border-radius: 15px;
+                padding: 10px;
+                margin: 3.5px;
+                color: white;
+                display: inline-block;
             }
 
 
@@ -110,6 +106,10 @@
 
                 ul > li {
                     font-size: 12px;
+                    padding: 2.5px;
+                }
+                ul > li > div {
+                    width: 265px;
                 }
             }
 
@@ -127,13 +127,16 @@
                 }
 
                 ul > li {
+                    padding: 2.5px;
                     font-size: 6px;
+                }
+                ul > li > div {
+                    width: 155px;
                 }
 
                 div#content-wrapper {
                     left: 65px;
                 }
-
                 div#content-wrapper > h1 {
                     text-wrap: wrap;
                     height: 120px;
@@ -176,7 +179,7 @@
 
             for (var i = 0; i < DATA.length; i++) {
                 var LI = document.createElement("li");
-                var S = document.createElement("span");
+                var S = document.createElement("div");
                 S.innerText = DATA[i];
                 S.id = DATA[i] + "-btn";
 
