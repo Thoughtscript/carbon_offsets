@@ -43,6 +43,9 @@
                 font-weight: 900;
                 font-size: 48px;
             }
+            h2, h1 {
+                text-shadow: 2px 2px lightgrey;
+            }
             iframe {
                 width: 1200px;
                 height: 900px;
@@ -56,31 +59,60 @@
                 width: 850px;
                 display: inline-block;
             }
-            ul > li > a {
+            ul#carbon-offset-ul-list > li > a {
                 text-decoration: none;
                 border: 1px solid orangered;
                 background-color: crimson;
             }
-            ul > li > div {
+            ul#carbon-offset-ul-list > li > div {
                 width: 338px;
                 text-decoration: none;
                 border: 1px solid crimson;
                 background-color: orangered;
             }
-
-            ul > li > div:hover, a:hover {
-                box-shadow: 0px 0px 0px 0px transparent;
-                color: white;
-                background-color: #000042;
-                border: 1px solid #000042;
-            }
-            ul > li > a,  ul > li > div {
+            ul#carbon-offset-ul-list > li > a,  ul#carbon-offset-ul-list > li > div {
                 box-shadow: 1px 2px 3px 1px gray;
                 border-radius: 15px;
                 padding: 10px;
                 margin: 3.5px;
                 color: white;
                 display: inline-block;
+            }
+            ul#carbon-offset-ul-list > li > div:not(.no-cert):hover, ul#carbon-offset-ul-list > li > a:not(.no-cert):hover {
+                box-shadow: 0px 0px 0px 0px transparent;
+                color: white;
+                background-color: #000042;
+                border: 1px solid #000042;
+            }
+            ul#carbon-offset-ul-list > li > div.no-cert, ul#carbon-offset-ul-list > li > a.no-cert {
+                box-shadow: 0px 0px 0px 0px transparent;
+                color: darkgray;
+                background-color: lightgray;
+                border: 1px solid lightgray;
+            }
+            ul#carbon-facts-and-data > li {
+                margin: 6.5px;
+            }
+            ul#carbon-facts-and-data > li > i > a {
+                border-radius: 3.15px;
+                padding: 6.5px;
+                border-bottom: 5px solid lightgreen;
+                background-color: green;
+                color: white;
+                text-decoration: none;
+                box-shadow: 1px 2px 3px 1px gray;
+            }
+            ul#carbon-facts-and-data > li > i > a:hover {
+                opacity: .8;
+                border: 0 0 0 0 transparent;
+                box-shadow: 0px 0px 0px 0px transparent;
+            }
+            #other-key-reductions, #carbon-offset-ul-list {
+                padding-bottom: 35px;
+            } 
+            #my-total {
+                color: darkgreen;
+                font-weight: bold;
             }
 
 
@@ -108,8 +140,12 @@
                     font-size: 12px;
                     padding: 2.5px;
                 }
-                ul > li > div {
+                ul > li > div, ul#carbon-offset-ul-list > li > div {
                     width: 265px;
+                }
+                ul#carbon-facts-and-data > li > i > a {
+                    padding: 4px;
+                    border-bottom: 3px solid lightgreen;
                 }
             }
 
@@ -130,7 +166,7 @@
                     padding: 2.5px;
                     font-size: 6px;
                 }
-                ul > li > div {
+                ul > li > div, ul#carbon-offset-ul-list > li > div {
                     width: 150px;
                 }
 
@@ -148,56 +184,106 @@
     <body>
         <div id='content-wrapper'>
             <h1>My Carbon Offsets</h1>
+
             <div id='carbon-offsets'>
                 <iframe src="./carbon_offsets/7e2b50d4-e4a3-43ef-9991-04b29e3381af.pdf" id="IFRAME_CARBON_OFFSET" type="application/pdf"></iframe>
 
-                <h2>Select Carbon Credit</h2>
+
+                <h2>Carbon Facts and Data</h2>
+                <ul id="carbon-facts-and-data">
+                    <li><i><a rel="nofollow noopener noreferrer" href="https://8billiontrees.com/carbon-offsets-credits/how-many-trees-to-offset-1-ton-of-co2/#:~:text=To%20offset%20one%20ton%20of,before%20making%20such%20a%20claim.">1 Ton of Carbon = ~38.5 Trees</a></i></li>
+                    <li><i>The average American emits <a rel="nofollow noopener noreferrer" href="https://www.nature.org/en-us/get-involved/how-to-help/carbon-footprint-calculator/#:~:text=A%20carbon%20footprint%20is%20the,highest%20rates%20in%20the%20world.">16 Tons of Carbon annually</a></i></li>
+                    <li><i><a rel="nofollow noopener noreferrer" href="https://www.cato.org/blog/blaming-us-passenger-vehicles-climate-change-ignorant-lucrative-1#:~:text=A%20CNN%20report%20says%2C%20%E2%80%9CMaking,auto%20sales%2C%20according%20to%20a">Personal transportation contributes 29% of Total U.S. greenhouse gases</a></i></li>
+                    <li><i>Tons of Carbon I've verifiably offset:<span id="my-total"></span></i></li>
+                </ul>
+
+                <h2>Verified Carbon Credits</h2>
                 <ul id="carbon-offset-ul-list"></ul>
+
+                <h2>Other Key Reductions</h2>
+                <ul>
+                    <li><i>Stopped driving solo whenever possible</i></li>
+                    <li><i>Vegetarian</i></li>
+                    <li><i>Quit smoking</i></li>
+                    <li><i>Reduced total garbage waste to < 2% (I recyle about 98% of things I throw away)</i></li>
+                    <li><i>Try to only use biodegradable items</i></li>
+                    <li><i>Stopped using gas (switched to all-electric)</i></li>
+                </ul id="other-key-reductions">
             </div>
         </div>
     </body>
     <script type="application/json" id="carbon-offset-data">
         [
-            "7e2b50d4-e4a3-43ef-9991-04b29e3381af",
-            "8fcad764-40cc-469d-9ac0-7103f0f9dfb9",
-            "675b2959-4dbe-4df4-bf76-23244c8bff6c",
-            "266376e1-49cc-4b5a-9749-c9dc2c774e9b",
-            "04047726-cec7-464d-88fb-65a0fb9e52f8",
-            "aa467873-13c3-4dba-8533-0f427c31b1e2",
-            "f53a88bd-ae1e-49dc-a0ea-31550e544ce9"
+            ["7e2b50d4-e4a3-43ef-9991-04b29e3381af", "1", "2024-03-28"],
+            ["8fcad764-40cc-469d-9ac0-7103f0f9dfb9", "2", "2024-04-11"],
+            ["aa467873-13c3-4dba-8533-0f427c31b1e2", "2.03", "2023-10-09"],
+            ["f53a88bd-ae1e-49dc-a0ea-31550e544ce9", "1.95", "2023-07-09"],
+            ["e15f61e6-2392-47a2-9ea2-40e07a133534", "1", "2024-04-23"],
+            ["675b2959-4dbe-4df4-bf76-23244c8bff6c", "1.3", "2024-02-10"],
+            ["266376e1-49cc-4b5a-9749-c9dc2c774e9b", ".64", "2024-02-27"],
+            ["04047726-cec7-464d-88fb-65a0fb9e52f8", ".64", "2024-03-03"],
+            ["No Certificate Available", ".64", "2023-08-18"],
+            ["No Certificate Available", ".64", "2023-12-10"]
         ]
     </script>
     <script>
+        "use strict";
+        
         window.onload = function() {
             var el = function (elem) {
                 return document.getElementById(elem);
             }
 
             var DATA = JSON.parse(el("carbon-offset-data").innerHTML);
+            DATA.sort((a,b) => {
+                var B = b[2];
+                var A = a[2];
+                if (B > A) return 1;
+                return -1;
+            })
+
+            var TOTAL_TONS = 0
 
             var UL = el("carbon-offset-ul-list");
 
             for (var i = 0; i < DATA.length; i++) {
                 var LI = document.createElement("li");
                 var S = document.createElement("div");
-                S.innerText = DATA[i];
-                S.id = DATA[i] + "-btn";
+
+                TOTAL_TONS += parseFloat(DATA[i][1]);
+                
+                var UUID = DATA[i][0];
+                S.innerText = UUID;
 
                 var A = document.createElement("a");
-                A.href = "./carbon_offsets/" + DATA[i] + ".pdf";
                 A.innerText = 'Download';
-                
-                LI.append(S);
-                LI.append(A);
-                UL.append(LI);
 
-                var BTN = el(`${DATA[i]}-btn`)
+                if (UUID !== "No Certificate Available") {
+                    S.id = UUID + "-btn";
+                    A.href = "./carbon_offsets/" + UUID + ".pdf";
+                    A.rel = "nofollow noopener noreferrer";
+ 
+                    LI.append(S);
+                    LI.append(A);
+                    UL.append(LI);
 
-                BTN.addEventListener("click", function(e) {
-                    var ID = e.target.innerText
-                    el("IFRAME_CARBON_OFFSET").src = `./carbon_offsets/${ID}.pdf`
-                })
+                    var BTN = el(`${UUID}-btn`)
+
+                    BTN.addEventListener("click", function(e) {
+                        var ID = e.target.innerText;
+                        el("IFRAME_CARBON_OFFSET").src = `./carbon_offsets/${ID}.pdf`;
+                    })
+                } else {
+                    S.className = "no-cert";
+                    A.className = "no-cert";
+
+                    LI.append(S);
+                    LI.append(A);
+                    UL.append(LI);
+                }
             }
+
+            el("my-total").innerText = ` ${TOTAL_TONS}`;
         }
     </script>
 </html>
