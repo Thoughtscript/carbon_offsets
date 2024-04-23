@@ -82,6 +82,8 @@
                 color: white;
                 background-color: #000042;
                 border: 1px solid #000042;
+                -webkit-transition: all 0.9s;
+                transition: all 0.9s;
             }
             ul#carbon-offset-ul-list > li > div.no-cert, ul#carbon-offset-ul-list > li > a.no-cert {
                 box-shadow: 0px 0px 0px 0px transparent;
@@ -105,6 +107,11 @@
                 opacity: .8;
                 border: 0 0 0 0 transparent;
                 box-shadow: 0px 0px 0px 0px transparent;
+                border-bottom: 5px solid green;
+                background-color: lightgreen;
+                color: green;
+                -webkit-transition: all 1.3s;
+                transition: all 1.3s;
             }
             #other-key-reductions, #carbon-offset-ul-list {
                 padding-bottom: 35px;
@@ -145,6 +152,9 @@
                 ul#carbon-facts-and-data > li > i > a {
                     padding: 4px;
                     border-bottom: 3px solid lightgreen;
+                }
+                ul#carbon-facts-and-data > li > i > a:hover {
+                    border-bottom: 3px solid green;
                 }
             }
 
