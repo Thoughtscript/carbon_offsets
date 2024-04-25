@@ -19,6 +19,7 @@
         <link rel="shortcut icon" href="carbon_favicon.svg" type="image/x-icon">
         
         <style>
+            @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
             @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
             html, body {
@@ -49,6 +50,7 @@
             iframe {
                 width: 1200px;
                 height: 900px;
+                box-shadow: 1px 2px 3px 1px gray;
             }
 
 
@@ -113,12 +115,52 @@
                 -webkit-transition: all 1.3s;
                 transition: all 1.3s;
             }
+            ul#other-key-reductions > li {
+                font-weight: 350;
+                letter-spacing: 1.25px;
+
+            }
             #other-key-reductions, #carbon-offset-ul-list {
                 padding-bottom: 35px;
             } 
             #my-total {
                 color: darkgreen;
                 font-weight: bold;
+            }
+
+
+            div#my-blog {
+                background-position: right;
+                background-size: cover;
+                background-repeat: no-repeat;
+                color: white;
+                letter-spacing: 1.25px;
+                font-family: "JetBrains Mono", monospace;
+                padding: 10px 12px;
+                margin: 5px;
+                font-size: 14px;
+                box-shadow: 1px 2px 3px 1px gray;
+                border-bottom: 2px solid lightgreen;
+                width: 315px;
+                border-radius: 25px;
+                background-color: #000042;
+                box-shadow: 1px 2px 2px 1px purple;
+                border-left: 5px solid deeppink;
+            }
+            div#my-blog > a {
+                color: white;
+            }
+            div#my-blog:hover {
+                background-color: #000042;
+                box-shadow: 1px 2px 2px 1px purple;
+                border-left: 5px solid deeppink;
+            }
+            div#my-blog:hover, div#my-blog > a:hover {
+                -webkit-transition: all .9s;
+                transition: all .9s;
+                opacity: .75;
+                box-shadow: 0px 0px 0px 0px transparent;
+                font-style: italic;
             }
 
 
@@ -204,7 +246,7 @@
             <h1>My Carbon Offsets</h1>
 
             <div id='carbon-offsets'>
-                <iframe src="./carbon_offsets/7e2b50d4-e4a3-43ef-9991-04b29e3381af.pdf" id="IFRAME_CARBON_OFFSET" type="application/pdf"></iframe>
+                <iframe src="./carbon_offsets/a3ab6886-b186-41fd-b701-40dd6a79c661.pdf" id="IFRAME_CARBON_OFFSET" type="application/pdf"></iframe>
 
                 <h2>Carbon Facts and Data</h2>
                 <ul id="carbon-facts-and-data">
@@ -219,20 +261,23 @@
 
                 <h2>Other Key Reductions</h2>
                 <ul id="other-key-reductions">
-                    <li><i>Stopped driving solo whenever possible</i></li>
-                    <li><i>Vegetarian</i></li>
-                    <li><i>Quit smoking</i></li>
-                    <li><i>Reduced total garbage to < 2% (I recyle about 98% of things)</i></li>
-                    <li><i>Try to only use biodegradable items</i></li>
-                    <li><i>Stopped using gas (switched to all-electric)</i></li>
-                    <li><i>Switched to high efficiency LEDs</i></li>
-                    <li><i>Offsets carbon when ordering online</i></li>
+                    <li>Stopped driving solo whenever possible</li>
+                    <li>Vegetarian</li>
+                    <li>Quit smoking</li>
+                    <li>Reduced total garbage to < 2% (I recyle about 98% of things)</li>
+                    <li>Try to only use biodegradable items</li>
+                    <li>Stopped using gas (switched to all-electric)</li>
+                    <li>Switched to high efficiency LEDs</li>
+                    <li>Offsets carbon when ordering online</li>
                 </ul>
             </div>
+
+            <div id="my-blog">Visit me at: <a rel="nofollow noopener noreferrer" href="https://www.thoughtscript.io/">thoughtscript.io</a> ❤️</div>
         </div>
     </body>
     <script type="application/json" id="carbon-offset-data">
         [
+            ["a3ab6886-b186-41fd-b701-40dd6a79c661", "5", "2024-04-24"],
             ["7e2b50d4-e4a3-43ef-9991-04b29e3381af", "1", "2024-03-28"],
             ["8fcad764-40cc-469d-9ac0-7103f0f9dfb9", "2", "2024-04-11"],
             ["aa467873-13c3-4dba-8533-0f427c31b1e2", "2.03", "2023-10-09"],
@@ -260,6 +305,8 @@
                 if (B > A) return 1;
                 return -1;
             })
+            var FIRST = DATA[0][0]
+            if (FIRST !== "No Certificate Available") el("IFRAME_CARBON_OFFSET").src = `./carbon_offsets/${FIRST}.pdf`;
 
             var TOTAL_TONS = 0
 
