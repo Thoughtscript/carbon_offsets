@@ -228,6 +228,10 @@
                     font-size: 4px;
                     padding: 3px;
                 }
+                div#my-blog {
+                    width: 235px;
+                    font-size: 10px;
+                }
 
 
                 div#content-wrapper {
@@ -264,7 +268,7 @@
                     <li>Stopped driving solo whenever possible</li>
                     <li>Vegetarian</li>
                     <li>Quit smoking</li>
-                    <li>Reduced total garbage to < 2% (I recyle about 98% of things)</li>
+                    <li>Reduced total garbage to < 2% (recyle ~98%)</li>
                     <li>Try to only use biodegradable items</li>
                     <li>Stopped using gas (switched to all-electric)</li>
                     <li>Switched to high efficiency LEDs</li>
@@ -349,7 +353,7 @@
                 }
             }
 
-            el("my-total").innerText = ` ${TOTAL_TONS}`;
+            el("my-total").innerText = ` ${TOTAL_TONS.toPrecision(5)}`;
         }
     </script>
 </html>
