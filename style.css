@@ -204,6 +204,8 @@ div#content-wrapper>div.row#my-blog {
     background-color: #000042;
     box-shadow: 1px 2px 2px 1px purple;
     border-left: 5px solid deeppink;
+    right: 15px;
+    position: relative;
 }
 
 div#content-wrapper>div.row#hosted-on {
