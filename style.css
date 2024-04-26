@@ -31,7 +31,8 @@ div#content-wrapper>div.row {
     width: 100%;
 }
 
-div#content-wrapper>div.row > ul, div#content-wrapper>div.row > h2 {
+div#content-wrapper>div.row>ul,
+div#content-wrapper>div.row>h2 {
     background: #FDFDFD;
     width: 100%;
     padding-left: 25px;
@@ -132,7 +133,7 @@ ul#carbon-facts-and-data>li {
 }
 
 ul#carbon-facts-and-data>li::marker {
- color: orangered;
+    color: orangered;
 }
 
 ul#carbon-facts-and-data>li>i>a {
@@ -174,7 +175,7 @@ ul#other-key-reductions>li {
     box-shadow: 0px 2px 2px 1px lightgray;
 }
 
-ul#other-key-reductions>li:hover{
+ul#other-key-reductions>li:hover {
     border-left: 7.5px solid lightgreen;
     border-bottom: 15px solid darkgreen;
     background-color: green;

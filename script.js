@@ -6,7 +6,7 @@ window.onload = function () {
     }
 
     var DATA = JSON.parse(el("carbon-offset-data").innerHTML);
-    DATA.sort(function(a, b) {
+    DATA.sort(function (a, b) {
         var B = b[2];
         var A = a[2];
         if (B > A) return 1;
