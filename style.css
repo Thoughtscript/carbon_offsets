@@ -224,7 +224,17 @@ div#content-wrapper>div.row#hosted-on {
     border-left: 5px solid #000042;
     border-bottom: 5px solid lightgreen;
     color: crimson;
-    padding-top: 20px;
+    padding-top: 30px;
+}
+
+div#content-wrapper>div.row#hosted-on>span {
+    position: relative;
+    bottom: 4px;
+}
+
+div#content-wrapper>div.row#my-blog>span {
+    position: relative;
+    bottom: 2px;
 }
 
 div#my-blog>a,
