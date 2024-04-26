@@ -1,0 +1,79 @@
+@media (max-width: 1200px) {
+    iframe {
+        width: 800px;
+        height: 600px;
+    }
+
+
+    ul>li {
+        font-size: 12px;
+        padding: 2.5px;
+    }
+
+    ul>li>div,
+    ul#carbon-offset-ul-list>li>div {
+        width: 265px;
+    }
+
+    ul#carbon-facts-and-data>li>i>a {
+        padding: 4px;
+        border-bottom: 3px solid lightgreen;
+    }
+
+    ul#carbon-facts-and-data>li>i>a:hover {
+        border-bottom: 3px solid green;
+    }
+}
+
+@media (max-width: 800px) {
+    iframe {
+        width: 525px;
+        height: 400px;
+    }
+}
+
+@media (max-device-width: 431px) {
+    iframe {
+        width: 305px;
+        height: 305px;
+    }
+
+
+    ul>li {
+        padding: 2.5px;
+        font-size: 6px;
+    }
+
+    ul>li>div,
+    ul#carbon-offset-ul-list>li>div,
+    ul#carbon-facts-and-data>li>i>a,
+    ul#carbon-facts-and-data>li>i,
+    ul#other-key-reductions>li>i {
+        width: 150px;
+    }
+
+    ul#carbon-facts-and-data>li {
+        margin: 6.15px;
+    }
+
+    ul#carbon-facts-and-data>li>i>a {
+        font-size: 4px;
+        padding: 3px;
+    }
+
+    div#my-blog {
+        width: 235px;
+        font-size: 10px;
+    }
+
+
+    div#content-wrapper {
+        left: 65px;
+    }
+
+    div#content-wrapper>h1 {
+        text-wrap: wrap;
+        height: 120px;
+        width: 325px;
+    }
+}

@@ -18,252 +18,51 @@
         -->
         <link rel="shortcut icon" href="carbon_favicon.svg" type="image/x-icon">
         
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-            html, body {
-                padding: 0;
-                margin: 0;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                overflow-x: hidden;
-            }
-            body, main {
-                font-family: "Roboto", sans-serif;
-                letter-spacing: 1px;
-            }
-            div#content-wrapper {
-                position: relative;
-                left: 75px;
-                padding-bottom: 250px;
-            }
-            h1 {
-                padding-top: 30px;
-                font-weight: 900;
-                font-size: 48px;
-            }
-            h2, h1 {
-                text-shadow: 2px 2px lightgrey;
-            }
-            iframe {
-                width: 1200px;
-                height: 900px;
-                box-shadow: 1px 2px 3px 1px gray;
-            }
-
-
-            ul, ul > li {
-                list-style: none;
-                padding: 5px;
-                width: 850px;
-                display: inline-block;
-            }
-            ul#carbon-offset-ul-list > li > a {
-                text-decoration: none;
-                border: 1px solid orangered;
-                background-color: crimson;
-            }
-            ul#carbon-offset-ul-list > li > div {
-                width: 338px;
-                text-decoration: none;
-                border: 1px solid crimson;
-                background-color: orangered;
-            }
-            ul#carbon-offset-ul-list > li > a,  ul#carbon-offset-ul-list > li > div {
-                box-shadow: 1px 2px 3px 1px gray;
-                border-radius: 15px;
-                padding: 10px;
-                margin: 3.5px;
-                color: white;
-                display: inline-block;
-            }
-            ul#carbon-offset-ul-list > li > div:not(.no-cert):hover, ul#carbon-offset-ul-list > li > a:not(.no-cert):hover {
-                box-shadow: 0px 0px 0px 0px transparent;
-                color: white;
-                background-color: #000042;
-                border: 1px solid #000042;
-                -webkit-transition: all 0.9s;
-                transition: all 0.9s;
-            }
-            ul#carbon-offset-ul-list > li > div.no-cert, ul#carbon-offset-ul-list > li > a.no-cert {
-                box-shadow: 0px 0px 0px 0px transparent;
-                color: darkgray;
-                background-color: lightgray;
-                border: 1px solid lightgray;
-            }
-            ul#carbon-facts-and-data > li {
-                margin: 6.5px;
-            }
-            ul#carbon-facts-and-data > li > i > a {
-                border-radius: 3.15px;
-                padding: 6.5px;
-                border-bottom: 5px solid lightgreen;
-                background-color: green;
-                color: white;
-                text-decoration: none;
-                box-shadow: 1px 2px 3px 1px gray;
-            }
-            ul#carbon-facts-and-data > li > i > a:hover {
-                opacity: .8;
-                border: 0 0 0 0 transparent;
-                box-shadow: 0px 0px 0px 0px transparent;
-                border-bottom: 5px solid green;
-                background-color: lightgreen;
-                color: green;
-                -webkit-transition: all 1.3s;
-                transition: all 1.3s;
-            }
-            ul#other-key-reductions > li {
-                font-weight: 350;
-                letter-spacing: 1.25px;
-
-            }
-            #other-key-reductions, #carbon-offset-ul-list {
-                padding-bottom: 35px;
-            } 
-            #my-total {
-                color: darkgreen;
-                font-weight: bold;
-            }
-
-
-            div#my-blog {
-                background-position: right;
-                background-size: cover;
-                background-repeat: no-repeat;
-                color: white;
-                letter-spacing: 1.25px;
-                font-family: "JetBrains Mono", monospace;
-                padding: 10px 12px;
-                margin: 5px;
-                font-size: 14px;
-                box-shadow: 1px 2px 3px 1px gray;
-                border-bottom: 2px solid lightgreen;
-                width: 315px;
-                border-radius: 25px;
-                background-color: #000042;
-                box-shadow: 1px 2px 2px 1px purple;
-                border-left: 5px solid deeppink;
-            }
-            div#my-blog > a {
-                color: white;
-            }
-            div#my-blog:hover {
-                background-color: #000042;
-                box-shadow: 1px 2px 2px 1px purple;
-                border-left: 5px solid deeppink;
-            }
-            div#my-blog:hover, div#my-blog > a:hover {
-                -webkit-transition: all .9s;
-                transition: all .9s;
-                opacity: .75;
-                box-shadow: 0px 0px 0px 0px transparent;
-                font-style: italic;
-            }
-
-
-            ::-webkit-scrollbar {
-                width: 10px;
-            }
-            ::-webkit-scrollbar-track {
-                background: crimson;
-            }
-            ::-webkit-scrollbar-thumb {
-                background: orangered;
-            }
-            ::-webkit-scrollbar-thumb:hover {
-                background: orangered;
-            }
-
-            @media (max-width: 1200px){
-                iframe {
-                    width: 800px;
-                    height: 600px;
-                }
-
-
-                ul > li {
-                    font-size: 12px;
-                    padding: 2.5px;
-                }
-                ul > li > div, ul#carbon-offset-ul-list > li > div {
-                    width: 265px;
-                }
-                ul#carbon-facts-and-data > li > i > a {
-                    padding: 4px;
-                    border-bottom: 3px solid lightgreen;
-                }
-                ul#carbon-facts-and-data > li > i > a:hover {
-                    border-bottom: 3px solid green;
-                }
-            }
-
-            @media (max-width: 800px){
-                iframe {
-                    width: 525px;
-                    height: 400px;
-                }
-            }
-
-            @media (max-device-width: 431px){
-                iframe {
-                    width: 305px;
-                    height: 305px;
-                }
-
-
-                ul > li {
-                    padding: 2.5px;
-                    font-size: 6px;
-                }
-                ul > li > div, ul#carbon-offset-ul-list > li > div, ul#carbon-facts-and-data > li > i > a, ul#carbon-facts-and-data > li > i, ul#other-key-reductions > li > i {
-                    width: 150px;
-                }
-                ul#carbon-facts-and-data > li {
-                    margin: 5px;
-                }
-                ul#carbon-facts-and-data > li > i > a {
-                    font-size: 4px;
-                    padding: 3px;
-                }
-                div#my-blog {
-                    width: 235px;
-                    font-size: 10px;
-                }
-
-
-                div#content-wrapper {
-                    left: 65px;
-                }
-                div#content-wrapper > h1 {
-                    text-wrap: wrap;
-                    height: 120px;
-                    width: 325px;
-                }
-            }
-        </style>
+        <!--
+        ********************************************************************************
+        *                                   STYLES                                     *
+        ********************************************************************************
+        -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="scroll.css">
+        <link rel="stylesheet" href="mobile.css">
     </head>
     <body>
         <div id='content-wrapper'>
-            <h1>My Carbon Offsets</h1>
+            <div class="row">
+                <h1>My Carbon Offsets</h1>
+            </div>
 
-            <div id='carbon-offsets'>
+            <div class="row" id='carbon-offsets'>
                 <iframe src="./carbon_offsets/a3ab6886-b186-41fd-b701-40dd6a79c661.pdf" id="IFRAME_CARBON_OFFSET" type="application/pdf"></iframe>
+            </div>
 
+            <div class="row">
                 <h2>Carbon Facts and Data</h2>
+            </div>
+
+            <div class="row">
                 <ul id="carbon-facts-and-data">
                     <li><i><a rel="nofollow noopener noreferrer" href="https://8billiontrees.com/carbon-offsets-credits/how-many-trees-to-offset-1-ton-of-co2/#:~:text=To%20offset%20one%20ton%20of,before%20making%20such%20a%20claim.">1 Ton of Carbon = ~38.5 Trees</a></i></li>
                     <li><i>The average American emits <a rel="nofollow noopener noreferrer" href="https://www.nature.org/en-us/get-involved/how-to-help/carbon-footprint-calculator/#:~:text=A%20carbon%20footprint%20is%20the,highest%20rates%20in%20the%20world.">16 Tons of Carbon annually</a></i></li>
-                    <li><i><a rel="nofollow noopener noreferrer" href="https://www.cato.org/blog/blaming-us-passenger-vehicles-climate-change-ignorant-lucrative-1#:~:text=A%20CNN%20report%20says%2C%20%E2%80%9CMaking,auto%20sales%2C%20according%20to%20a">Personal transportation constitutes 29% of U.S. greenhouse gases</a></i></li>
+                    <li><i><a rel="nofollow noopener noreferrer" href="https://www.cato.org/blog/blaming-us-passenger-vehicles-climate-change-ignorant-lucrative-1#:~:text=A%20CNN%20report%20says%2C%20%E2%80%9CMaking,auto%20sales%2C%20according%20to%20a">Personal transportation creates 29% of U.S. greenhouse gases</a></i></li>
                     <li><i>Tons of Carbon I've verifiably offset:<span id="my-total"></span></i></li>
                 </ul>
+            </div>
 
+            <div class="row">
                 <h2>Verified Carbon Credits</h2>
-                <ul id="carbon-offset-ul-list"></ul>
+            </div>
 
+            <div class="row">
+                <ul id="carbon-offset-ul-list"></ul>
+            </div>
+
+            <div class="row">
                 <h2>Other Key Reductions</h2>
+            </div>
+
+            <div class="row">
                 <ul id="other-key-reductions">
                     <li>Stopped driving solo whenever possible</li>
                     <li>Vegetarian</li>
@@ -275,10 +74,18 @@
                     <li>Offsets carbon when ordering online</li>
                 </ul>
             </div>
+        
+            <div class="row" id="my-blog">Visit me at: <a rel="nofollow noopener noreferrer" href="https://www.thoughtscript.io/">thoughtscript.io</a> ❤️</div>
 
-            <div id="my-blog">Visit me at: <a rel="nofollow noopener noreferrer" href="https://www.thoughtscript.io/">thoughtscript.io</a> ❤️</div>
+            <div class="row" id="hosted-on">Hosted on: <a rel="nofollow noopener noreferrer" href="https://github.com/Thoughtscript/carbon_offsets">GitHub</a> 🌱</div>
         </div>
     </body>
+
+    <!--
+    ********************************************************************************
+    *                                   SCRIPTS                                    *
+    ********************************************************************************
+    -->
     <script type="application/json" id="carbon-offset-data">
         [
             ["a3ab6886-b186-41fd-b701-40dd6a79c661", "5", "2024-04-25"],
@@ -294,66 +101,5 @@
             ["No Certificate Available", ".64", "2023-12-10"]
         ]
     </script>
-    <script>
-        "use strict";
-        
-        window.onload = function() {
-            var el = function (elem) {
-                return document.getElementById(elem);
-            }
-
-            var DATA = JSON.parse(el("carbon-offset-data").innerHTML);
-            DATA.sort((a,b) => {
-                var B = b[2];
-                var A = a[2];
-                if (B > A) return 1;
-                return -1;
-            })
-            var FIRST = DATA[0][0]
-            if (FIRST !== "No Certificate Available") el("IFRAME_CARBON_OFFSET").src = `./carbon_offsets/${FIRST}.pdf`;
-
-            var TOTAL_TONS = 0
-
-            var UL = el("carbon-offset-ul-list");
-
-            for (var i = 0; i < DATA.length; i++) {
-                var LI = document.createElement("li");
-                var S = document.createElement("div");
-
-                TOTAL_TONS += parseFloat(DATA[i][1]);
-                
-                var UUID = DATA[i][0];
-                S.innerText = UUID;
-
-                var A = document.createElement("a");
-                A.innerText = 'Download';
-
-                if (UUID !== "No Certificate Available") {
-                    S.id = UUID + "-btn";
-                    A.href = "./carbon_offsets/" + UUID + ".pdf";
-                    A.rel = "nofollow noopener noreferrer";
- 
-                    LI.append(S);
-                    LI.append(A);
-                    UL.append(LI);
-
-                    var BTN = el(`${UUID}-btn`)
-
-                    BTN.addEventListener("click", function(e) {
-                        var ID = e.target.innerText;
-                        el("IFRAME_CARBON_OFFSET").src = `./carbon_offsets/${ID}.pdf`;
-                    })
-                } else {
-                    S.className = "no-cert";
-                    A.className = "no-cert";
-
-                    LI.append(S);
-                    LI.append(A);
-                    UL.append(LI);
-                }
-            }
-
-            el("my-total").innerText = ` ${TOTAL_TONS.toPrecision(5)}`;
-        }
-    </script>
+    <script src="script.js"></script>
 </html>
