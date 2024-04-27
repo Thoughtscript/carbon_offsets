@@ -40,6 +40,23 @@ div#content-wrapper>div.row>h2 {
     padding-bottom: 25px;
 }
 
+div#content-wrapper>div.row#mobile-forewarning {
+    font-size: 12px;
+    padding-bottom: 30px;
+}
+
+div#content-wrapper>div.row#mobile-forewarning>div {
+    padding-left: 25px;
+}
+
+div#content-wrapper>div.row#mobile-forewarning>div>i {
+    color: white;
+    background: #000042;
+    padding: 7px;
+    border-left: 5px solid deeppink;
+    border-radius: 3.5px;
+}
+
 div#content-wrapper>div.row#carbon-offsets {
     background: #FDFDFD;
 }

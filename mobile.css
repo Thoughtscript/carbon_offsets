@@ -30,6 +30,16 @@
         width: 525px;
         height: 400px;
     }
+
+    div#content-wrapper>div.row#mobile-forewarning {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 530px) {
+    div#content-wrapper>div.row#mobile-forewarning {
+        font-size: 8px;
+    }
 }
 
 @media (max-device-width: 431px) {
@@ -70,5 +80,9 @@
     div#content-wrapper>div.row>h2 {
         padding-left: 15px;
         font-size: 25px;
+    }
+
+    div#content-wrapper>div.row#mobile-forewarning {
+        font-size: 6px;
     }
 }
