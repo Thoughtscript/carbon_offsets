@@ -243,6 +243,7 @@ div#content-wrapper>div.row#hosted-on {
     border-bottom: 5px solid lightgreen;
     color: crimson;
     padding-top: 30px;
+    font-weight: 600;
 }
 
 div#content-wrapper>div.row#hosted-on>span {
