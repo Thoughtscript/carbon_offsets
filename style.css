@@ -208,7 +208,7 @@ ul#other-key-reductions>li:hover {
     padding-bottom: 35px;
 }
 
-#my-total {
+#my-total, #trees-total {
     color: darkgreen;
     font-weight: bold;
 }

@@ -46,6 +46,7 @@ window.onload = function () {
                 var ID = e.target.innerText;
                 el("IFRAME_CARBON_OFFSET").src = `./carbon_offsets/${ID}.pdf`;
             })
+
         } else {
             S.className = "no-cert";
             A.className = "no-cert";
@@ -57,4 +58,5 @@ window.onload = function () {
     }
 
     el("my-total").innerText = ` ${TOTAL_TONS.toPrecision(5)}`;
+    el("trees-total").innerText = `${TOTAL_TONS.toPrecision(5)*38.5}`;
 }
