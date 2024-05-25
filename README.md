@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/badge/mdn-iframe-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
 
-Just a fun page to track and host my carbon offsetting/credits.
+Just a fun page to track and host my carbon offsetting/credits. **Update:** I was invited to apply with this to a Startup Incubator recently (to be further developed into a Company/Product) but declined due to a lack of direct experience in that industry. (And, not out of interest! Greenwashing is a major challenge to help derisk the Decarbonization Industry.) 
 
 Also, wanted to test the following:
 
