@@ -60,6 +60,10 @@ div#content-wrapper>div.row#mobile-forewarning>div>i {
 
 div#content-wrapper>div.row#carbon-offsets {
     background: #FDFDFD;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {

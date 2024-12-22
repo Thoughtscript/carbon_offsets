@@ -8,7 +8,7 @@ Just a fun page to track and host my carbon offsetting/credits.
 
 Also, wanted to test the following:
 
-1. I was unaware that `iframes` could be modified *after being rendered*. Curious about how the `iframe` and `pdfviewer` interact on the page. I use them [here](https://www.thoughtscript.io/blog/000000000093) and [elsewhere](https://www.thoughtscript.io/papers/000000000006) but the *content is fixed* and *doesn't change once rendered*. 
+1. I was unaware that `iframes` could be modified *after being rendered*. (*That it doesn't rerender or reload the page, for instance.*) Curious about how the `iframe` and `pdfviewer` interact on the page. I use them [here](https://www.thoughtscript.io/blog/000000000093) and [elsewhere](https://www.thoughtscript.io/papers/000000000006) but the *content is fixed* and *doesn't change once rendered*. 
 1. Identifying and playing with some limits to testing `iframes`. For instance, using the Browser-based **Web Inspector** on Desktop will fail to correctly render the changing `iframe src`. However, when deployed to a host, the changes appear correctly. 
    
    i. This appears to be the case regardless of Browser/vendor.  
