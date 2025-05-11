@@ -25,8 +25,11 @@ window.onload = function () {
 
         TOTAL_TONS += parseFloat(DATA[i][1]);
 
+        var IMPACT = DATA[i][3];
+
         var UUID = DATA[i][0];
         S.innerText = UUID;
+        S.title = "For: " + IMPACT
 
         var A = document.createElement("a");
         A.innerText = 'Download';
@@ -35,7 +38,7 @@ window.onload = function () {
             S.id = UUID + "-btn";
             A.href = "./carbon_offsets/" + UUID + ".pdf";
             A.rel = "nofollow noopener noreferrer";
-
+     
             LI.append(S);
             LI.append(A);
             UL.append(LI);
